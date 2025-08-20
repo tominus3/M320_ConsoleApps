@@ -117,8 +117,44 @@
             return average;
         }
 
-        static int ArrayLowestNumber();
-        
+        // Gives back the lowest value of an array
+        static int ArrayLowestNumber(int[] array)
+        {
+            int lowest = 0;
+            lowest = array[0];
+            foreach(int item in array)
+            {
+                if (lowest > item)
+                {
+                    lowest = item;
+                }
+            }
+            return lowest;
+        }
+
+        // Gives back the highest value of an array
+        static int ArrayHighestNumber(int[] array)
+        {
+            int highest = 0;
+            highest = array[0];
+            foreach (int item in array)
+            {
+                if (highest < item)
+                {
+                    highest = item;
+                }
+            }
+            return highest;
+        }
+
+        // Swaps the the Input numbers
+        static void Swap(ref int number1, ref int number2)
+        {
+            int temp = number1;
+            number1 = number2;
+            number2 = temp;
+        }
+
         // Main Programm Loop
         static void Main()
         {
